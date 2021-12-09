@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends 'ideas/base.html'%}
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <title>Ideas</title>
+</head>
+<body>
+<div class="navbar">
+        <div class="websitename">
+            <a href="{% url 'home' %}">
+                            <img class="iic" src="{% static 'imgs/pngaaa.com-2355573.png' %}" alt="centered image" style="vertical-align:middle" height="100px"  >
+
+            </a>
+            <img class="logo" src="{% static 'imgs/logo.png' %}"  height="100px" style="vertical-align:middle" >
+            <div class="user">Logged In as {{ user.username }}
+        <div><form action="{% url 'logoutuser' %}" method="POST">
+            {% csrf_token %}
+
+            <button class="btnsmall" type="submit">Logout</button></form>
+            </div>
+            </div>
+        </div>
+
+
+
+        </form>
+
+    </div>
+
+<div class="ideablock">
+  <div class="text">Create your ideas here:</div>
+  
+    {% for idea in ideas%}
+    <div>
+        <ul >
+            <li class="dot">
+        <a href="{% url 'viewidea'  idea.id %}">
+            <button class="ideastitle">{{ idea.title  }}</button>
+        </a>
+            </li>
+        </ul>
+    </div>
+
+    {% endfor %}
+</div>
+<a href="{% url 'createidea' %}"><button class="creat" type="button">Create Idea</button></a>
+
+
+
+</body>
+
+</html>
+{% endblock %}

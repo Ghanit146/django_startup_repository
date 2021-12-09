@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@100&display=swap');
+
+
+body{
+    padding:0;
+    margin:0;
+    background:#005a94;
+
+}
+
+.navbar{
+    top:0px;
+    display: block;
+    width:100%;
+	height:100px;
+    font-family: 'Georama', sans-serif;
+    font-size:18px;
+    color:#454545;
+	background-color:#fff;
+	border-top: 5px solid #005a94;
+    box-shadow:0 0 5px 0  #808080;
+    position: fixed;
+}
+.btnsmall{
+    position:relative;
+    margin-top:25px;
+	font-family: 'Georama', sans-serif;
+    border:none;
+    background:#fff;
+	color:#454545;
+	height:35px;
+	width: 100px;
+    border-radius:50px;
+    float: right;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.btnsmall:hover{
+	border:1px solid #fff;
+	background:#005a94;
+	color:white;
+
+}
+
+a:link{
+    text-decoration: none;
+}
+.signupform{
+    font-family: 'Georama', sans-serif;
+    padding:10px;
+	background:#fff;
+    display: block;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 65%;
+    border-radius:20px;
+    box-shadow:2px  #808080 ;
+}
+.loginform{
+    font-family: 'Georama', sans-serif;
+    padding:10px;
+	background:#fff;
+    display: block;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 30%;
+    border-radius:20px;
+    box-shadow:2px  #808080 ;
+
+}
+.error{
+    font-family: 'Georama', sans-serif;
+    color:#fff;
+    font-size:15px;
+    text-align: center;
+
+}
+.creat{
+    margin-top:auto;
+	font-family: 'Georama', sans-serif;
+    border:none;
+    background:#fff;
+	color:#454545;
+	height:35px;
+	width: 100px;
+    border-radius:50px;
+    margin-right:20px;
+	float:right;
+	position: relative;
+}
+.creat:hover{
+	border:1px solid #fff;
+	background:#005a94;
+	color:white;
+
+}
+.ideablock{
+    font-family: 'Georama', sans-serif;
+    padding:10px;
+	background:#fff;
+    display: block;
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 95%;
+    height:auto;
+    border-radius:20px;
+    box-shadow:2px  #808080 ;
+
+}
+
+.ideastitle{
+    padding:10px;
+    padding-bottom:10px;
+    margin-top:auto;
+	font-family: 'Georama', sans-serif;
+	font-size:25px;
+    border:none;
+    background:#29ca8e;
+	color:#fff;
+	height:auto;
+	width: auto;
+    border-radius:50px;
+    margin-right:20px;
+	float:left;
+	position: relative;
+}
+.ideastitle:hover{
+	border:1px solid #fff;
+	background:#005a94;
+	color:white;
+
+}
+
+.dot{
+    color:#005a94;
+    padding:5px;
+}
+.user{
+    padding:20px;
+    font-size:15px;
+    text-align:center;
+    border:1px solid #fff;
+	font-family: 'Georama', sans-serif;
+    background:#005a94;
+	color:#fff;
+	height:auto;
+	width:auto;
+    border-radius:50px;
+    float:right;
+}
+.createidea{
+    font-family: 'Georama', sans-serif;
+    padding:10px;
+	background:#fff;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 95%;
+    border-radius:20px;
+    box-shadow:2px  #808080 ;
+
+}
+.logo{
+    margin-left:150px;
+
+}
+.titletxt{
+    padding:20px;
+    margin-top:100px;
+    font-family: 'Georama', sans-serif;
+    color:#fff;
+    font-size:30px;
+}
+.submit{
+    margin-left:40px;
+    float:left;
+}
+.ideabtn{
+    margin-left:10px;
+    margin-bottom:20px;
+}
+.datetime{
+    border:1px solid #fff;
+	background:#29ca8e;
+
+	border-radius:50px;
+	width:50%;
+	color:white;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-top:10px;
+}
+.remarks{
+    border:1px solid #fff;
+	background:#005a94;
+	border-radius:50px;
+	width:100%;
+	color:white;
+    margin-right:auto;
+    text-align:center;
+    margin-top:10px;
+
+}
+
+.footer{
+    position:absolute;
+    padding:10px 10px 0px 10px;
+    bottom:0;
+    width:100%;
+    height:80px;
+    background:#dcdcdc;
+}
+.foottxt{
+    font-family: 'Georama', sans-serif;
+    color:#454545;
+    text-align: center;
+    margin-top: 10px;
+}
+.footersignup{
+    position:absolute;
+    padding:10px 10px 0px 10px;
+    margin-top:100px;
+
+    width:100%;
+    height:80px;
+    background:#dcdcdc;
+}
+
+
+@media only screen and (max-width: 600px){
+    .navbar{
+        height:200px;
+    }
+    .logo{
+        margin:0;
+        width:100%;
+        height:auto;
+    }
+    .iic{
+        width:auto;
+        height:50px;
+    }
+    .titletxt{
+        margin-top:200px;
+    }
+    .signupform{
+        margin-top:250px;
+    }
+    .loginform{
+        margin-top:350px;
+        width:200px;
+    }
+    .ideablock{
+        margin-top:250px;
+    }
+    .createidea{
+        margin-top:250px;
+    }
+}

@@ -1,0 +1,42 @@
+{% extends 'ideas/base.html'%}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <div class="navbar ">
+        <a href="{% url 'home' %}">
+                        <img class="iic" src="{% static 'imgs/pngaaa.com-2355573.png' %}" alt="centered image" style="vertical-align:middle" height="100px"  >
+
+        </a>
+        <img class="logo " src="{% static 'imgs/logo.png' %}"  height="100px" style="vertical-align:middle" >
+        <a  href="{% url 'signupuser' %}">
+            <button class="btnsmall">Sign Up</button>
+        </a>
+    </div>
+    <div class="loginform">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btnsmall"  type="submit">Login</button>
+        </form>
+    </div>
+<div class="error"> {{error}}</div>
+
+
+
+</body>
+<footer class="footer">
+        <div class="foottxt">Made by Ghanit Kumar for:
+            <br>
+            Institution's Innovation Council (IIC 4.0)
+            <br>
+            Engineering College Bikaner
+        </div>
+
+    </footer>
+{% endblock %}

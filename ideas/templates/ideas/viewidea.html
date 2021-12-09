@@ -1,0 +1,48 @@
+{% extends 'ideas/base.html'%}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="createidea">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <h4>Remarks:</h4>
+            {% if not idea.remarks.all %}
+            <div class="remarks">No remarks yet...</div>
+            {% else %}
+                {% for remarks in idea.remarks.all %}
+                <div class="remarks">
+                        <li>{{ remarks.body }}</li>
+                    {{ remarks.remarkdate }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="datetime">
+                Submitted on: {{ idea.created }}
+                <br>
+                Edited on: {{ idea.edited }}
+                </div>
+            <div>
+                <button class="btnsmall ideabtn" type="submit">Submit</button>
+            </div>
+             </form>
+            <div>
+                <form method="POST" action="{% url 'deleteidea' idea.id %}">
+                    {% csrf_token %}
+                    <button class="btnsmall ideabtn" type="submit">Delete</button>
+                </form>
+
+
+            </div>
+    </div>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Startup Repository</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="icon" href="{% static 'imgs/iccicon.png' %}" type="image/gif">
+</head>
+<body>
+{% if user.is_authenticated %}
+Logged In as {{ user.username }}
+    <div class="navbar">
+        <div class="websitename">
+            <a href="{% url 'home' %}">
+                <img class="iic" src="{% static 'imgs/pngaaa.com-2355573.png' %}" alt="centered image" style="vertical-align:middle" height="100px"  >
+            </a>
+                <img class="logo" src="{% static 'imgs/logo.png' %}"  height="100px" style="vertical-align:middle" >
+                <div class="user">Logged In as {{ user.username }}
+            <div>
+                <form action="{% url 'logoutuser' %}" method="POST">
+                {% csrf_token %}
+
+                    <button class="btnsmall" type="submit">Logout</button></form>
+            </div>
+                </div>
+        </div>
+                </form>
+
+    </div>
+
+
+
+
+{% else %}
+    <div class="navbar">
+       <div class="websitename">
+            <a href="{% url 'home' %}">
+                <img class="iic" src="{% static 'imgs/pngaaa.com-2355573.png' %}" alt="centered image" style="vertical-align:middle" height="100px"  >
+            </a>
+
+            <img class="logo" src="{% static 'imgs/logo.png' %}" alt="centered image" style="vertical-align:middle" height="100px"  >
+
+            <a  href="{% url 'signupuser' %}" >
+                <button class="btnsmall hidden">Sign Up</button>
+            </a>
+            <a  href="{% url 'loginuser' %}">
+                <button class="btnsmall hidden">Login</button>
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+{% endif %}
+{% block content%}{% endblock %}
+
+</body>
+
+</html>
