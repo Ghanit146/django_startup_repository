@@ -6,6 +6,15 @@ class Idea(models.Model):
      title = models.CharField(max_length=100)
      problem = models.TextField(max_length=200)
      solution = models.TextField(max_length=200)
+     basic_principles_observed_and_reported = models.TextField(blank=True)
+     technology_concept_and_or_application_formulated = models.TextField(blank=True)
+     analytical_and_experimental_critical_function_and_or_characteristic_proof_of_concept = models.TextField(blank=True)
+     technology_basic_validation_in_a_laboratory_environment = models.TextField(blank=True)
+     technology_basic_validation_in_a_relevant_environment = models.TextField(blank=True)
+     technology_model_or_prototype_demonstration_in_a_relevant_environment = models.TextField(blank=True)
+     technology_prototype_demonstration_in_an_operational_environment = models.TextField(blank=True)
+     actual_technology_completed_and_qualified_through_test_and_demonstration = models.TextField(blank=True)
+     actual_technology_qualified_through_successful_mission_operations = models.TextField(blank=True)
      business_model = models.TextField(blank=True) #The field can be left blank
      market = models.TextField(blank=True)
      created = models.DateTimeField(auto_now_add=True) #Date and time of the edit or created can't be changed
